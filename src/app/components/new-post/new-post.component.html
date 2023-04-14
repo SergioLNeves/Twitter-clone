@@ -9,11 +9,9 @@
         <!-- Form -->
         <div class="flex-1">
             <!-- Text Area -->
-            <textarea
+            <textarea (keyup.enter)="sendTweet()"
                 class="placeholder-gray-700 mb-2 bg-gray-200 focus:outline-none focus:shadow-outline focus:bg-gray-100 resize-none border-transparent border rounded-lg py-2 px-4 block w-full appearance-none font-light "
-                placeholder="O que está acontecendo?"
-                [(ngModel)]="tweetMessage"
-                (input)="changeTweet()"
+                placeholder="O que está acontecendo?" [(ngModel)]="tweetMessage" (input)="changeTweet()"
                 maxlength="560">
             </textarea>
             <!-- Divider Line -->
@@ -27,7 +25,10 @@
                 </div>
                 <!-- Button -->
                 <div class="mt-5">
-                    <button (click)="sendTweet()" [ngClass]="buttonFunction" type="button" class="shadow font-medium text-center text-white  w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg bg-blue-500">Tweetar</button>
+                    <button (click)="sendTweet()" [ngClass]="buttonFunction" type="button"
+                        class="shadow font-medium text-center text-white  w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg bg-blue-500">
+                        Tweetar
+                    </button>
                 </div>
             </div>
         </div>

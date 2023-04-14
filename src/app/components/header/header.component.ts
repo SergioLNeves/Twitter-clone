@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  dropdownOpen = false;
+
+  toggleDropdown(){
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
 }

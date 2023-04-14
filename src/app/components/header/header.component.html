@@ -8,10 +8,19 @@
             </div>
             <!-- User -->
             <div class="relative">
-                <div class="cursor-pointer w-10 h-10 bg-blue-200 text-blue-600 flex items-center justify-center rounded-full ">
+                <button (click)="toggleDropdown()"
+                    class="focus:hover:ring-2 focus:ring-offset-1 focus:ring-blue-600 cursor-pointer w-10 h-10 bg-blue-200 text-blue-600 flex items-center justify-center rounded-full ">
                     S
+                </button>
+                <div *ngIf="dropdownOpen"
+                    class="origin-top-right absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div class="py-1">
+                        <a target="_blank" href="https://www.linkedin.com/in/sergiolneves/" alt="Linkedin"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+                            Linkedin
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
