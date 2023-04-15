@@ -31,6 +31,7 @@ export class NewPostComponent {
       this.service.addMessage(this.tweetMessage)
       this.tweetMessage = ""
       this.tweetRemain = this.tweetMaxLenght
+      location.reload()
     }
   }
 
